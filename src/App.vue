@@ -1,26 +1,57 @@
 <template>
-  <div id="tab-bar">
-    <div class="tab-bar-item">首页</div>
-    <div class="tab-bar-item">分类</div>
-    <div class="tab-bar-item">购物车</div>
-    <div class="tab-bar-item">我的</div>
-  </div>
+  <tab-bar>
+    <tab-bar-item>
+      <template v-slot:item-icon>
+        <img src="~assets/img/home.png" alt="" />
+      </template>
+      <template v-slot:item-text>
+        <p>首页</p>
+      </template>
+    </tab-bar-item>
+    <tab-bar-item>
+      <template v-slot:item-icon>
+        <img src="~assets/img/category.png" alt="">
+      </template>
+      <template v-slot:item-text>
+        <p>分类</p>
+      </template>
+    </tab-bar-item>
+    <tab-bar-item>
+      <template v-slot:item-icon>
+        <img src="~assets/img/shopcar.png" alt="">
+      </template>
+      <template v-slot:item-text>
+        <p>购物车</p>
+      </template>
+    </tab-bar-item>
+    <tab-bar-item>
+      <template v-slot:item-icon>
+        <img src="~assets/img/profile.png" alt="">
+      </template>
+      <template v-slot:item-text>
+        <p>我的</p>
+      </template>
+    </tab-bar-item>
+  </tab-bar>
 </template>
 
-<style>
-@import 'assets/css/base';
-#tab-bar {
-  display: flex;
-  background-color: #f6f6f6;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  box-shadow: 0 -1px 1px rgba(100, 100, 100, 0.1);
+<script>
+import TabBar from 'components/common/tabbar/TabBar';
+import TabBarItem from 'components/common/tabbar/TabBarItem';
+export default {
+  name: 'App',
+  components: {
+    TabBar,
+    TabBarItem
+  }
 }
-.tab-bar-item {
-  flex: 1;
-  text-align: center;
-  height: 49px;
+</script>
+
+<style scoped>
+@import 'assets/css/base';
+
+.tab-bar-item img {
+  width: 25px;
+  height: 25px;
 }
 </style>
