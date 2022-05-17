@@ -1,6 +1,6 @@
 <template>
   <tab-bar>
-    <tab-bar-item>
+    <tab-bar-item path="/home" @click="imgChange">
       <template v-slot:item-icon>
         <img src="~assets/img/home.png" alt="" />
       </template>
@@ -8,31 +8,32 @@
         <p>首页</p>
       </template>
     </tab-bar-item>
-    <tab-bar-item>
+    <tab-bar-item path="/category" @click="imgChange">
       <template v-slot:item-icon>
-        <img src="~assets/img/category.png" alt="">
+        <img src="~assets/img/category.png" alt="" />
       </template>
       <template v-slot:item-text>
         <p>分类</p>
       </template>
     </tab-bar-item>
-    <tab-bar-item>
+    <tab-bar-item path="/shopcar" @click="imgChange">
       <template v-slot:item-icon>
-        <img src="~assets/img/shopcar.png" alt="">
+        <img src="~assets/img/shopcar.png" alt="" />
       </template>
       <template v-slot:item-text>
         <p>购物车</p>
       </template>
     </tab-bar-item>
-    <tab-bar-item>
+    <tab-bar-item path="/profile" @click="imgChange">
       <template v-slot:item-icon>
-        <img src="~assets/img/profile.png" alt="">
+        <img src="~assets/img/profile.png" alt="" />
       </template>
       <template v-slot:item-text>
         <p>我的</p>
       </template>
     </tab-bar-item>
   </tab-bar>
+  <router-view />
 </template>
 
 <script>
@@ -49,9 +50,5 @@ export default {
 
 <style scoped>
 @import 'assets/css/base';
-
-.tab-bar-item img {
-  width: 25px;
-  height: 25px;
-}
+@import 'assets/css/tabbaritem';
 </style>

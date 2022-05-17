@@ -1,0 +1,10 @@
+.tab-bar-item img {
+  width: 25px;
+  height: 25px;
+  transition: width 0.5s, height 0.5s;
+}
+
+.tab-bar-item img:hover {
+  width: 20px;
+  height: 20px;
+}

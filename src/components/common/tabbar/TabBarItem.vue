@@ -1,5 +1,5 @@
 <template>
-  <div class="tab-bar-item">
+  <div class="tab-bar-item" @click="itemRedirect">
     <slot name="item-icon"></slot>
     <slot name="item-text"></slot>
   </div>
@@ -7,7 +7,15 @@
 
 <script>
 export default {
-  name: 'TabBarItem'
+  name: 'TabBarItem',
+  props: {
+    path: String
+  },
+  methods: {
+    itemRedirect() {
+      this.$router.replace(this.path);
+    }
+  }
 }
 </script>
 
