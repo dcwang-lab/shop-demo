@@ -5,7 +5,7 @@ axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8';
 // 创建axios实例
 const service = axios.create({
   // 请求url公共部分
-  baseURL: '',
+  baseURL: 'http://127.0.0.1:8070/shop-commodity',
   // 超时时间
   timeout: 10000
 });
