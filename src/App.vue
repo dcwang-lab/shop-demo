@@ -2,7 +2,7 @@
   <tab-bar>
     <tab-bar-item path="/home" @click="imgChange">
       <template v-slot:item-icon>
-        <img src="~assets/img/home.png" alt="" />
+        <img src="~assets/img/tabbar/home.png" alt="" />
       </template>
       <template v-slot:item-text>
         <p>首页</p>
@@ -10,7 +10,7 @@
     </tab-bar-item>
     <tab-bar-item path="/category" @click="imgChange">
       <template v-slot:item-icon>
-        <img src="~assets/img/category.png" alt="" />
+        <img src="~assets/img/tabbar/category.png" alt="" />
       </template>
       <template v-slot:item-text>
         <p>分类</p>
@@ -18,7 +18,7 @@
     </tab-bar-item>
     <tab-bar-item path="/shopcar" @click="imgChange">
       <template v-slot:item-icon>
-        <img src="~assets/img/shopcar.png" alt="" />
+        <img src="~assets/img/tabbar/shopcar.png" alt="" />
       </template>
       <template v-slot:item-text>
         <p>购物车</p>
@@ -26,7 +26,7 @@
     </tab-bar-item>
     <tab-bar-item path="/profile" @click="imgChange">
       <template v-slot:item-icon>
-        <img src="~assets/img/profile.png" alt="" />
+        <img src="~assets/img/tabbar/profile.png" alt="" />
       </template>
       <template v-slot:item-text>
         <p>我的</p>
