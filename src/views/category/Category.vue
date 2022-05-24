@@ -12,6 +12,24 @@
       </template>
     </nav-bar>
   </div>
+  <div class="sort">
+    <ul>
+      <li>热门推荐</li>
+      <li>手机数码</li>
+      <li>家用电器</li>
+      <li>电脑办公</li>
+      <li>玩具乐器</li>
+      <li>家具厨具</li>
+      <li>家居家装</li>
+      <li>男装</li>
+      <li>男鞋</li>
+      <li>女装</li>
+      <li>女鞋</li>
+      <li>美妆护肤</li>
+      <li>医药保健</li>
+      <li>酒水饮料</li>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -25,15 +43,26 @@ export default {
 </script>
 
 <style scoped>
+.sort {
+  position: relative;
+  z-index: 1;
+  width: 25%;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+.sort li {
+  height: 50px;
+  line-height: 50px;
+}
 .home-nav {
-  background-color: #cdb5cd;
+  background-color: #fff;
   color: #fff;
 }
 
 #search {
   width: 250px;
   height: 27px;
-  font-size: 5px;
+  font-size: 14px;
   border: 0;
   outline: none;
   border-radius: 15px;
@@ -41,6 +70,7 @@ export default {
   background-size: 18px 18px;
   background-position: 5px;
   text-indent: 10%;
-  background-color: #fff;
+  background-color: #f5f5f5;
+  vertical-align: middle;
 }
 </style>

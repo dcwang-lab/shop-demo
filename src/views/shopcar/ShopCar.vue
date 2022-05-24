@@ -1,8 +1,14 @@
 <template>
   <div id="home">
     <nav-bar class="home-nav">
+      <template v-slot:left>
+        <img class="btn-return" src="~assets/img/common/return.png" alt="">
+      </template>
       <template v-slot:center>
         <div>购物车({{total}})</div>
+      </template>
+      <template v-slot:right>
+        <img class="btn-more" src="~assets/img/common/more.png" alt="">
       </template>
     </nav-bar>
   </div>
@@ -25,7 +31,7 @@ export default {
 
 <style scoped>
 .home-nav {
-  background-color: #cdb5cd;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
 }
 </style>
