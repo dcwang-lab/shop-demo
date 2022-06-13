@@ -14,7 +14,7 @@
   </div>
   <div class="sort">
     <ul>
-      <li v-for="item in listCategorys" :key="item.id" @click="liClick(item.id)" :class="{active: item.id==id}">
+      <li v-for="item in categoryList" :key="item.id" @click="liClick(item.id)" :class="{active: item.id==id}">
         {{item.name}}</li>
     </ul>
   </div>
@@ -22,6 +22,7 @@
 
 <script>
 import NavBar from 'components/common/navbar/NavBar';
+import { listCategories } from 'api/commodity/category';
 export default {
   name: 'Category',
   components: {
@@ -30,30 +31,40 @@ export default {
   data() {
     return {
       id: 0,
-      listCategorys: [
-        { id: 1, name: '热门推荐' },
-        { id: 2, name: '手机数码' },
-        { id: 3, name: '家用电器' },
-        { id: 4, name: '电脑办公' },
-        { id: 5, name: '玩具乐器' },
-        { id: 6, name: '家具厨具' },
-        { id: 7, name: '家居家装' },
-        { id: 8, name: '男装' },
-        { id: 9, name: '男鞋' },
-        { id: 10, name: '女装' },
-        { id: 11, name: '女鞋' },
-        { id: 12, name: '美妆护肤' },
-        { id: 13, name: '医药保健' },
-        { id: 14, name: '酒水饮料' },
-        { id: 15, name: '户外运动' },
-        { id: 16, name: '二手商品' },
-        { id: 17, name: '生活旅行' }
-      ]
+      categoryList: [
+        // { id: 1, name: '热门推荐' },
+        // { id: 2, name: '手机数码' },
+        // { id: 3, name: '家用电器' },
+        // { id: 4, name: '电脑办公' },
+        // { id: 5, name: '玩具乐器' },
+        // { id: 6, name: '家具厨具' },
+        // { id: 7, name: '家居家装' },
+        // { id: 8, name: '男装' },
+        // { id: 9, name: '男鞋' },
+        // { id: 10, name: '女装' },
+        // { id: 11, name: '女鞋' },
+        // { id: 12, name: '美妆护肤' },
+        // { id: 13, name: '医药保健' },
+        // { id: 14, name: '酒水饮料' },
+        // { id: 15, name: '户外运动' },
+        // { id: 16, name: '二手商品' },
+        // { id: 17, name: '生活旅行' }
+      ],
+      queryParams: {}
     }
+  },
+  created() {
+    this.getCategoryList();
   },
   methods: {
     liClick(id) {
       this.id = id;
+    },
+    // 获取商品分类列表
+    getCategoryList() {
+      listCategories(this.queryParams).then(res => {
+        this.categoryList = res.data;
+      });
     }
   }
 }
@@ -72,6 +83,7 @@ export default {
   text-align: center;
   background-color: #f8f8f8;
   height: 540px;
+  /* height: 100%; */
   overflow-y: auto;
 }
 /* 去掉滚动条 */
@@ -81,9 +93,12 @@ export default {
 .sort li {
   height: 50px;
   line-height: 50px;
-  white-space: nowrap; /*不让文字内容换行*/
-  overflow: hidden; /*文字溢出的部分隐藏起来*/
-  text-overflow: ellipsis; /*用...替代溢出的部分*/
+  /* 不让文字内容换行 */
+  white-space: nowrap;
+  /* 文字溢出的部分隐藏起来 */
+  overflow: hidden;
+  /* 用...替代溢出的部分 */
+  text-overflow: ellipsis;
 }
 .home-nav {
   background-color: #fff;

@@ -24,7 +24,7 @@
 
 <script>
 import NavBar from 'components/common/navbar/NavBar';
-import { listCommodities } from 'api/commodity';
+import { listCommodities } from 'api/commodity/commodity';
 export default {
   name: 'Home',
   components: {
