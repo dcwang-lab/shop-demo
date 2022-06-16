@@ -5,14 +5,25 @@ axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8';
 // 创建axios实例
 const service = axios.create({
   // 请求url公共部分
-  baseURL: 'http://127.0.0.1/shop-commodity',
-  // baseURL: 'http://172.20.10.9/shop-commodity',
+  baseURL: 'http://127.0.0.1',
   // 超时时间
   timeout: 10000
 });
 
 // request拦截器
 service.interceptors.request.use(config => {
+  let urlType = config.urlType;
+  config.url = config.baseURL + urlType + config.url;
+  /* switch (urlType) {
+    case '/shop-commodity': {
+      config.url = config.baseURL + urlType + config.url;
+      break;
+    }
+    case '/shop-user' : {
+      config.url = config.baseURL + urlType + config.url;
+      break;
+    }
+  } */
   return config;
 }, error => {
   console.log(error);
