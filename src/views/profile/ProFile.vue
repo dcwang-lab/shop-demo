@@ -53,7 +53,7 @@ export default {
 
 <style scoped>
 .home-nav {
-  background-color: #cdb5cd;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
 }
 </style>

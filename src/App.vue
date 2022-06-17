@@ -1,5 +1,5 @@
 <template>
-  <tab-bar>
+  <tab-bar v-if="$route.meta.isShowTabBar">
     <tab-bar-item path="/home" @click="imgChange">
       <template v-slot:item-icon>
         <img src="~assets/img/tabbar/home.png" alt="" />

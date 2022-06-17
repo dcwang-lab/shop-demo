@@ -14,16 +14,6 @@ const service = axios.create({
 service.interceptors.request.use(config => {
   let urlType = config.urlType;
   config.url = config.baseURL + urlType + config.url;
-  /* switch (urlType) {
-    case '/shop-commodity': {
-      config.url = config.baseURL + urlType + config.url;
-      break;
-    }
-    case '/shop-user' : {
-      config.url = config.baseURL + urlType + config.url;
-      break;
-    }
-  } */
   return config;
 }, error => {
   console.log(error);

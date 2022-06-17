@@ -54,8 +54,8 @@ export default {
 
 <style scoped>
 .home-nav {
-  background-color: #cdb5cd;
-  color: #fff;
+  background-color: #ff6a6a;
+  color: #000;
 }
 th,
 td {

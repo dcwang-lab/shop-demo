@@ -4,27 +4,44 @@ const Home = () => import('views/home/Home');
 const Category = () => import('views/category/Category');
 const ShopCar = () => import('views/shopcar/ShopCar');
 const ProFile = () => import('views/profile/ProFile');
+const Login = () => import('views/Login');
 
 const routes = [
   {
     path: '/',
-    redirect: '/home'
+    redirect: '/login'
+  },
+  {
+    path: '/login',
+    component: Login
   },
   {
     path: '/home',
-    component: Home
+    component: Home,
+    meta: {
+      isShowTabBar: true
+    }
   },
   {
     path: '/category',
-    component: Category
+    component: Category,
+    meta: {
+      isShowTabBar: true
+    }
   },
   {
     path: '/shopcar',
-    component: ShopCar
+    component: ShopCar,
+    meta: {
+      isShowTabBar: true
+    }
   },
   {
     path: '/profile',
-    component: ProFile
+    component: ProFile,
+    meta: {
+      isShowTabBar: true
+    }
   }
 ]
 
