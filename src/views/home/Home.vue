@@ -19,16 +19,19 @@
         </tr>
       </table>
     </div>
+    <banner />
   </div>
 </template>
 
 <script>
 import NavBar from 'components/common/navbar/NavBar';
+import Banner from 'views/home/Banner';
 import { listCommodities } from 'api/commodity/commodity';
 export default {
   name: 'Home',
   components: {
-    NavBar
+    NavBar,
+    Banner
   },
   data() {
     return {
