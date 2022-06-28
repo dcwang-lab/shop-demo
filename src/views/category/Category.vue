@@ -22,7 +22,7 @@
 
 <script>
 import NavBar from 'components/common/navbar/NavBar';
-import { listCategories } from 'api/commodity/category';
+import { listCategories } from 'api/product/category';
 export default {
   name: 'Category',
   components: {

@@ -26,7 +26,7 @@
 <script>
 import NavBar from 'components/common/navbar/NavBar';
 import Banner from 'views/home/Banner';
-import { listCommodities } from 'api/commodity/commodity';
+import { listCommodities } from 'api/product/product';
 export default {
   name: 'Home',
   components: {

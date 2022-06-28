@@ -1,16 +1,39 @@
+body {
+  background: url(~assets/img/login/login_background.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
 input {
   outline: none;
 }
 .login-div {
   width: 100%;
-  height: 200px;
-  text-align: center;
-  /* border: 1px solid green; */
+  height: 250px;
+  border: 1px solid #fff;
   position: absolute;
-  bottom: 45%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.login-input {
+  padding: 10%;
+  text-align: center;
 }
 .login-input label {
-  width: 290px;
+  color: #fffff0;
+  font-size: 15px;
+  
+}
+.login-input input {
+  width: 100px;
+  padding: 1%;
+}
+.login-btn {
+  text-align: center;
+}
+/* .login-input label {
+  color: #fff;
+  width: 215px;
   display: inline-block;
   text-align: right;
 }
@@ -32,4 +55,4 @@ input {
   border: 0.5px solid #87ceff;
   border-radius: 10px;
   background-color: #e6e6fa;
-}
+} */

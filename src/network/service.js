@@ -1,9 +1,9 @@
-const shopCommodity = '/shop-commodity';
+const shopProduct = '/shop-product';
 const shopUser = '/shop-user';
 const shopResource = '/shop-resource';
 
 const service = {
-  shopCommodity,
+  shopProduct,
   shopUser,
   shopResource
 };
