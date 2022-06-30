@@ -1,11 +1,11 @@
 import request from '@/network/request';
 import service from '@/network/service';
 
-export function listCommodities(query) {
+export function listBanners(query) {
   return request({
-    url: '/commodity/listCommodities',
+    url: '/banner/listBanners',
     method: 'get',
     params: query,
-    urlType: service.shopProduct
+    urlType: service.shopResource
   });
 }

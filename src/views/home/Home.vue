@@ -5,7 +5,7 @@
         <div>首页</div>
       </template>
     </nav-bar>
-    <div>
+    <!-- <div>
       <table>
         <tr>
           <th>id</th>
@@ -18,7 +18,7 @@
           <td>{{item.price}}</td>
         </tr>
       </table>
-    </div>
+    </div> -->
     <banner />
   </div>
 </template>
